@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\GenereController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +22,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::get('/saludo', function () {
-return json_encode("Hola Mundo");
+$respuesta = Http::get('https://api.deezer.com/genre');
+$generos = $respuesta->json();
+return $generos;
 });
+
+Route::get('/obtener.generos', [GenereController::class, 'obtenerGeneros']);
+
+
