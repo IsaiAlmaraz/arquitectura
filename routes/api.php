@@ -27,6 +27,6 @@ $generos = $respuesta->json();
 return $generos;
 });
 
-Route::get('/obtener.generos', [GenereController::class, 'obtenerGeneros']);
+Route::get('/obtener.Generos', [GenreController::class, 'obtenerGeneros']);
 
 

@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 
-class GenresController extends Controller
+class GenreController extends Controller
 {
 
-     public function obtenerGeneros()
-     {
+    public function obtenerGeneros()
+    {
         $curl = curl_init();
 
         curl_setopt_array($curl, [
@@ -44,8 +44,13 @@ class GenresController extends Controller
 
                 if(!$verificar)
                     $nuevoGenero = new Genre();
-
-                $nuevoGenero->name = $genero->name;
+                    $nuevoGenero->name = $genero->name;
+                    $nuevoGenero->picture=$genero->picture;
+                    $nuevoGenero->picture_small= $genero->picture_small;
+                    $nuevoGenero->picture_medium= $genero->picture_medium;
+                    $nuevoGenero->picture_big= $genero->picture_big;
+                    $nuevoGenero->picture_xl= $genero->picture_xl;
+                //$nuevoGenero->name = $genero->name;
                 $nuevoGenero->save();
 
                  if(isset($genero->picture))

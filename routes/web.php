@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GenreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Genre', [GenreController::class, 'obtenerGeneros'])->name('obtener.generos');
+Route::get('/Generos', [GenreController::class,'obtenerGeneros'])->name("obtener.generos");

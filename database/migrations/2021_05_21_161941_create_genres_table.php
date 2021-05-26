@@ -21,6 +21,8 @@ class CreateGenresTable extends Migration
             $table->string('picture_medium')->nullable();
             $table->string('picture_big')->nullable();
             $table->string('picture_xl')->nullable();
+            $table->string('updated_at');
+            $table->string('created_at');
         });
     }
 
