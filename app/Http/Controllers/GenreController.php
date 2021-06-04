@@ -40,7 +40,7 @@ class GenreController extends Controller
             foreach($objeto->data as $genero){
 
                 echo json_encode($genero);
-                /*
+                
                 $verificar = Genre::where('name',$genero->name)->first();
 
                 if(!$verificar)
@@ -53,7 +53,7 @@ class GenreController extends Controller
                     $nuevoGenero->picture_xl= $genero->picture_xl;
                 //$nuevoGenero->name = $genero->name;
                 $nuevoGenero->save();
-                */
+               
                 
                  if(isset($genero->picture))
                 echo "<img src='$genero->picture' alt=''>";
