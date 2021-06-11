@@ -43,17 +43,17 @@ class GenreController extends Controller
                 
                 $verificar = Genre::where('name',$genero->name)->first();
 
-               echo $genero->name;
-//                 if(!$verificar)
-//                     $nuevoGenero = new Genre();
-//                     $nuevoGenero->name = $genero->name;
-//                     $nuevoGenero->picture=$genero->picture;
-//                     $nuevoGenero->picture_small= $genero->picture_small;
-//                     $nuevoGenero->picture_medium= $genero->picture_medium;
-//                     $nuevoGenero->picture_big= $genero->picture_big;
-//                     $nuevoGenero->picture_xl= $genero->picture_xl;
-//                 //$nuevoGenero->name = $genero->name;
-//                 $nuevoGenero->save();
+               //echo $genero->name;
+                if(!$verificar)
+                    $nuevoGenero = new Genre();
+                    $nuevoGenero->name = "ok";
+                    $nuevoGenero->picture="ok";
+                    $nuevoGenero->picture_small= "ok";
+                    $nuevoGenero->picture_medium= "ok";
+                    $nuevoGenero->picture_big= "ok";
+                    $nuevoGenero->picture_xl= "ok";
+                //$nuevoGenero->name = $genero->name;
+                $nuevoGenero->save();
                
                 
 //                  if(isset($genero->picture))
