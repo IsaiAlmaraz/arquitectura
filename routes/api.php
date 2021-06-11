@@ -31,3 +31,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/Generos', [GenreController::class,'obtenerGeneros'])->name("obtener.generos");
 Route::get('/Generos/{id}', [GenreController::class,'encontrarGenero']);
 Route::get('/TodosGeneros', [GenreController::class,'encontrarTodos']);
+Route::get('/Artistas/{id}', [ArtistaController::class, 'ObtenerArtista']);
