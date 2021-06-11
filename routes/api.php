@@ -3,6 +3,7 @@
 use App\Http\Controllers\GenereController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GenreController;
 
 
 /*
@@ -21,12 +22,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/saludo', function () {
-$respuesta = Http::get('https://api.deezer.com/genre');
-$generos = $respuesta->json();
-return $generos;
-});
+// Route::get('/saludo', function () {
+// $respuesta = Http::get('https://api.deezer.com/genre');
+// $generos = $respuesta->json();
+// return $generos;
+// });
 
-Route::get('/obtener.Generos', [GenreController::class, 'obtenerGeneros']);
-
-
+Route::get('/Generos', [GenreController::class,'obtenerGeneros'])->name("obtener.generos");
+Route::get('/Generos/{id}', [GenreController::class,'encontrarGenero']);
+Route::get('/TodosGeneros', [GenreController::class,'encontrarTodos']);
