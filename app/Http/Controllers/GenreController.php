@@ -57,22 +57,22 @@ class GenreController extends Controller
                 }
                
                 
-//                  if(isset($genero->picture))
-//                 echo "<img src='$genero->picture' alt=''>";
+                 if(isset($genero->picture))
+                echo "<img src='$genero->picture' alt=''>";
 
-//                 if(isset($genero->picture_small))
-//                 echo "<img src='$genero->picture_small' alt=''>";
+                if(isset($genero->picture_small))
+                echo "<img src='$genero->picture_small' alt=''>";
 
-//                 if(isset($genero->picture_medium))
-//                 echo "<img src='$genero->picture_medium' alt=''>";
+                if(isset($genero->picture_medium))
+                echo "<img src='$genero->picture_medium' alt=''>";
 
-//                 if(isset($genero->picture_big))
-//                 echo "<img src='$genero->picture_big' alt=''>";
+                if(isset($genero->picture_big))
+                echo "<img src='$genero->picture_big' alt=''>";
 
-//                 if(isset($genero->picture_xl))
-//                 echo "<img src='$genero->picture_xl' alt=''>";
+                if(isset($genero->picture_xl))
+                echo "<img src='$genero->picture_xl' alt=''>";
 
-//             echo "<hr>";
+            echo "<hr>";
 
                 //echo $genero->name;
             }
