@@ -39,10 +39,11 @@ class GenreController extends Controller
 
             foreach($objeto->data as $genero){
 
-                echo json_encode($genero);
+                //echo json_encode($genero);
                 
                 $verificar = Genre::where('name',$genero->name)->first();
 
+               echo $genero->name;
 //                 if(!$verificar)
 //                     $nuevoGenero = new Genre();
 //                     $nuevoGenero->name = $genero->name;
