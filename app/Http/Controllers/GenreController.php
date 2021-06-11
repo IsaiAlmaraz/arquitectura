@@ -43,34 +43,34 @@ class GenreController extends Controller
                 
                 $verificar = Genre::where('name',$genero->name)->first();
 
-                if(!$verificar)
-                    $nuevoGenero = new Genre();
-                    $nuevoGenero->name = $genero->name;
-                    $nuevoGenero->picture=$genero->picture;
-                    $nuevoGenero->picture_small= $genero->picture_small;
-                    $nuevoGenero->picture_medium= $genero->picture_medium;
-                    $nuevoGenero->picture_big= $genero->picture_big;
-                    $nuevoGenero->picture_xl= $genero->picture_xl;
-                //$nuevoGenero->name = $genero->name;
-                $nuevoGenero->save();
+//                 if(!$verificar)
+//                     $nuevoGenero = new Genre();
+//                     $nuevoGenero->name = $genero->name;
+//                     $nuevoGenero->picture=$genero->picture;
+//                     $nuevoGenero->picture_small= $genero->picture_small;
+//                     $nuevoGenero->picture_medium= $genero->picture_medium;
+//                     $nuevoGenero->picture_big= $genero->picture_big;
+//                     $nuevoGenero->picture_xl= $genero->picture_xl;
+//                 //$nuevoGenero->name = $genero->name;
+//                 $nuevoGenero->save();
                
                 
-                 if(isset($genero->picture))
-                echo "<img src='$genero->picture' alt=''>";
+//                  if(isset($genero->picture))
+//                 echo "<img src='$genero->picture' alt=''>";
 
-                if(isset($genero->picture_small))
-                echo "<img src='$genero->picture_small' alt=''>";
+//                 if(isset($genero->picture_small))
+//                 echo "<img src='$genero->picture_small' alt=''>";
 
-                if(isset($genero->picture_medium))
-                echo "<img src='$genero->picture_medium' alt=''>";
+//                 if(isset($genero->picture_medium))
+//                 echo "<img src='$genero->picture_medium' alt=''>";
 
-                if(isset($genero->picture_big))
-                echo "<img src='$genero->picture_big' alt=''>";
+//                 if(isset($genero->picture_big))
+//                 echo "<img src='$genero->picture_big' alt=''>";
 
-                if(isset($genero->picture_xl))
-                echo "<img src='$genero->picture_xl' alt=''>";
+//                 if(isset($genero->picture_xl))
+//                 echo "<img src='$genero->picture_xl' alt=''>";
 
-            echo "<hr>";
+//             echo "<hr>";
 
                 //echo $genero->name;
             }
