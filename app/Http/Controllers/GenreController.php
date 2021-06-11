@@ -44,7 +44,7 @@ class GenreController extends Controller
                 $verificar = Genre::where('name',$genero->name)->first();
 
                //echo $genero->name;
-                if(!$verificar)
+                if(!$verificar){
                     $nuevoGenero = new Genre();
                     $nuevoGenero->name = "ok";
                     $nuevoGenero->picture="ok";
@@ -54,6 +54,7 @@ class GenreController extends Controller
                     $nuevoGenero->picture_xl= "ok";
                 //$nuevoGenero->name = $genero->name;
                 $nuevoGenero->save();
+                }
                
                 
 //                  if(isset($genero->picture))
