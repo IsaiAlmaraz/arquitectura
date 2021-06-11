@@ -38,13 +38,13 @@ class ArtistaController extends Controller
             $objeto = json_decode($response);
 
             if(isset($objeto->name))
-                echo "<h3>'Nombre: '.$objeto->name </h3>"."<br/>";
+                echo "<h3>$objeto->name </h3>"."<br/>";
 
             if(isset($objeto->link))
-                echo "<h3> 'Link: '.$objeto->link </h3>"."<br/>";
+                echo "<h3>$objeto->link </h3>"."<br/>";
 
             if(isset($objeto->share))
-                echo "<h3> 'share'. $objeto->share </h3>"."<br/>";
+                echo "<h3>$objeto->share </h3>"."<br/>";
 
             if(isset($objeto->picture))
                 echo "<img src='$objeto->picture' alt=''>"."<br/>";
@@ -59,16 +59,16 @@ class ArtistaController extends Controller
                 echo "<img src='$objeto->picture_big' alt=''>"."<br/>";
 
             if(isset($objeto->nb_album))
-                echo "<h3> 'nb_album: '. $objeto->nb_album </h3>"."<br/>";
+                echo "<h3>$objeto->nb_album </h3>"."<br/>";
 
             if(isset($objeto->nb_fan))
-                echo "<h3>'nb_fan.: '.$objeto->nb_fan </h3>"."<br/>";
+                echo "<h3>$objeto->nb_fan </h3>"."<br/>";
 
             if(isset($objeto->radio))
-                echo "<h3> 'radio: '.$objeto->radio </h3>"."<br/>";
+                echo "<h3>$objeto->radio </h3>"."<br/>";
 
             if(isset($objeto->tracklist))
-                echo "<h3> 'tracklist: '.$objeto->tracklist </h3>"."<br/>";
+                echo "<h3>$objeto->tracklist </h3>"."<br/>";
 
             echo "
         <hr>";
