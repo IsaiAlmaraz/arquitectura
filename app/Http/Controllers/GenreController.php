@@ -79,6 +79,63 @@ class GenreController extends Controller
         }
 
     }
+    
+    public function encontrarGenero($id)
+    {
+        $genero = Genre::find($id);
+        foreach ($genero->data as $generoDetalle)
+        {
+            if(isset($generoDetalle->name))
+            echo "<h3> $generoDetalle->name </h3>";
+
+            if(isset($generoDetalle->picture))
+            echo "<img src='$generoDetalle->picture' alt=''>";
+
+            if(isset($generoDetalle->picture_small))
+            echo "<img src='$generoDetalle->picture_small' alt=''>";
+
+            if(isset($generoDetalle->picture_medium))
+            echo "<img src='$generoDetalle->picture_medium' alt=''>";
+
+            if(isset($generoDetalle->picture_big))
+            echo "<img src='$generoDetalle->picture_big' alt=''>";
+
+            if(isset($generoDetalle->picture_xl))
+            echo "<img src='$generoDetalle->picture_xl' alt=''>";
+
+            echo "<hr>";
+
+        }
+    }
+    public function encontrarTodos()
+    {
+        $generos=Genre::all();
+        foreach($generos as $genero)
+        {
+            if(isset($genero->name))
+            echo "<h3> $genero->name </h3>";
+
+            if(isset($genero->picture))
+            echo "<img src='$genero->picture' alt=''>";
+
+            if(isset($genero->picture_small))
+            echo "<img src='$genero->picture_small' alt=''>";
+
+            if(isset($genero->picture_medium))
+            echo "<img src='$genero->picture_medium' alt=''>";
+
+            if(isset($genero->picture_big))
+            echo "<img src='$genero->picture_big' alt=''>";
+
+            if(isset($genero->picture_xl))
+            echo "<img src='$genero->picture_xl' alt=''>";
+
+            echo "<hr>";
+
+        }
+    }
+
+
 
 
 }
