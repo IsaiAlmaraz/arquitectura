@@ -79,6 +79,34 @@ class GenreController extends Controller
         }
 
     }
+    public function encontrarGenero($id)
+    {
+        $genero = Genre::find($id);
+        foreach ($genero->data as $generoDetalle)
+        {
+            if(isset($generoDetalle->name))
+            echo "<h3> $genero->name </h3>";
+
+            if(isset($generoDetalle->picture))
+            echo "<img src='$genero->picture' alt=''>";
+
+            if(isset($generoDetalle->picture_small))
+            echo "<img src='$generoDetalle->picture_small' alt=''>";
+
+            if(isset($generoDetalle->picture_medium))
+            echo "<img src='$generoDetalle->picture_medium' alt=''>";
+
+            if(isset($generoDetalle->picture_big))
+            echo "<img src='$generoDetalle->picture_big' alt=''>";
+
+            if(isset($generoDetalle->picture_xl))
+            echo "<img src='$generoDetalle->picture_xl' alt=''>";
+
+            echo "<hr>";
+
+        }
+    }
+
 
 
 }
